@@ -1,0 +1,12 @@
+{
+  "name": "fisiocare-desktop",
+  "version": "1.0.0",
+  "description": "FisioCare - Sistema de Clínica de Fisioterapia",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "electron": "^27.3.11"
+  }
+}
