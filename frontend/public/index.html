@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>FisioCare</title>
+    <link rel="stylesheet" href="style.css"/>
+    <!-- Chart.js para gráficos de evolução -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════
+     TELA DE LOGIN
+════════════════════════════════════════ -->
+<div id="login-screen">
+    <div class="login-card">
+        <div class="login-logo">💆 FisioCare</div>
+        <p class="login-sub">Sistema de Gerenciamento de Fisioterapia</p>
+
+        <div class="form-group" style="margin-bottom:14px;text-align:left">
+            <label>E-mail</label>
+            <input type="email" id="login-email" placeholder="seu@email.com"/>
+        </div>
+        <div class="form-group" style="margin-bottom:22px;text-align:left">
+            <label>Senha</label>
+            <input type="password" id="login-senha" placeholder="••••••••"/>
+        </div>
+        <button class="btn btn-primary" style="width:100%;justify-content:center;padding:12px"
+                onclick="App.login()">
+            Entrar
+        </button>
+        <p id="login-erro" style="color:#dc3545;font-size:.85rem;margin-top:12px;display:none"></p>
+    </div>
+</div>
+
+<!-- ═══════════════════════════════════════
+     APP PRINCIPAL (oculto até login)
+════════════════════════════════════════ -->
+<div id="app" style="display:none">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-brand">
+            <h1>💆 FisioCare</h1>
+            <p>Gestão de Fisioterapia</p>
+        </div>
+
+        <div class="sidebar-user">
+            <div class="sidebar-avatar" id="sb-avatar">A</div>
+            <div class="sidebar-user-info">
+                <strong id="sb-nome">Usuário</strong>
+                <span id="sb-perfil">Perfil</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav" id="sidebar-nav">
+            <div class="nav-item active" data-page="dashboard">
+                <span class="nav-icon">🏠</span> Dashboard
+            </div>
+            <div class="nav-item staff-only" data-page="pacientes">
+                <span class="nav-icon">👥</span> Pacientes
+            </div>
+            <div class="nav-item admin-only" data-page="funcionarios">
+                <span class="nav-icon">👔</span> Funcionários
+            </div>
+            <div class="nav-item staff-only" data-page="agendamentos">
+                <span class="nav-icon">📅</span> Agendamentos
+            </div>
+            <div class="nav-item" data-page="evolucao">
+                <span class="nav-icon">📈</span> Evolução
+            </div>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" onclick="App.logout()">🚪 Sair do sistema</button>
+        </div>
+    </aside>
+
+    <!-- CONTEÚDO -->
+    <main class="main-content">
+        <div id="page-container"></div>
+    </main>
+</div>
+
+<!-- TOAST -->
+<div id="toast" class="toast" style="display:none"></div>
+
+<!-- ═══════════════════════════════════════
+     SCRIPTS
+════════════════════════════════════════ -->
+<script src="js/api.js"></script>
+<script src="js/pages/dashboard.js"></script>
+<script src="js/pages/pacientes.js"></script>
+<script src="js/pages/funcionarios.js"></script>
+<script src="js/pages/agendamentos.js"></script>
+<script src="js/pages/evolucao.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
