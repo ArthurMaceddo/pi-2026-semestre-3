@@ -4,7 +4,6 @@ import com.fisiocare.dao.UsuarioDAO;
 import com.fisiocare.model.Usuario;
 
 import java.security.MessageDigest;
-import java.util.Base64;
 import java.util.Map;
 import java.util.UUID;
 import java.util.concurrent.ConcurrentHashMap;
@@ -50,16 +49,5 @@ public class AutenticacaoService {
         sessoes.remove(token);
     }
 
-    /**
-     * Hash SHA-256 da senha em Base64
-     */
-    public static String hashSenha(String senha) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("SHA-256");
-            byte[] hash = md.digest(senha.getBytes());
-            return Base64.getEncoder().encodeToString(hash);
-        } catch (Exception e) {
-            return senha;
-        }
-    }
+
 }

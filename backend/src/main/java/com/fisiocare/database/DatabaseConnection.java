@@ -12,11 +12,11 @@ import java.sql.SQLException;
 public class DatabaseConnection {
 
     // ========= CONFIGURAÇÕES DO BANCO =========
-    private static final String HOST     = "localhost";
+    private static final String HOST     = "192.168.15.33";
     private static final String PORT     = "5432";
     private static final String DATABASE = "fisiocare_db";
     private static final String USER     = "postgres";
-    private static final String PASSWORD = "Aml11282006$";
+    private static final String PASSWORD = "admin";
     // ==========================================
 
     private static HikariDataSource dataSource;
