@@ -215,6 +215,6 @@ A janela do FisioCare abrirá automaticamente.
 ## 🎓 Informações Acadêmicas
 
 - **Instituição:** FATEC
-- **Curso:** Desenvolvimento de Software Multiplataforma
+- **Curso:** Análise e Desenvolvimento de Sistemas
 - **Semestre:** 3º Semestre
 - **Ano:** 2026
