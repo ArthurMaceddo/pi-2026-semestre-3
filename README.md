@@ -120,7 +120,7 @@ Antes de começar, certifique-se de ter instalado:
 ### 1. Clone o repositório
 
 ```bash
-git clone https://github.com/seu-usuario/fisiocare.git
+git clone https://github.com/ArthurMaceddo/fisiocare.git
 cd fisiocare
 ```
 
